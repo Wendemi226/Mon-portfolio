@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Wendémi Fabrice KABORE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles_override.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">Fabrice</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero container">
+    <div class="home-card">
+      <div class="home-text">
+        <p class="small-subtitle">WENDÉMI FABRICE KABORE</p>
+        <h1>Transformez votre vie avec le digital</h1>
+        <p class="description">Je suis un passionné du digital, de la communication et de l'innovation sociale.</p>
+        <form class="email-form" action="#" method="post">
+          <input type="email" placeholder="Entrez votre email" required />
+          <button type="submit">Je veux en savoir plus</button>
+        </form>
+        </p>
+      </div>
+      <div class="home-image">
+        <img src="Fabrice.png" alt="Photo de Wendémi Fabrice KABORE" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services container">
+    <h2>Services</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="dev web.jpg" alt="Développement Web" class="card-icon" />
+        <h3>Développement Web</h3>
+        <p>Création de sites web modernes, responsives et performants adaptés à vos besoins.</p>
+      </div>
+      <div class="card">
+        <img src="e commerce.jpg" alt="E-Commerce" class="card-icon" />
+        <h3>E-Commerce</h3>
+        <p>Solutions e-commerce complètes pour booster vos ventes en ligne.</p>
+      </div>
+      <div class="card">
+        <img src="graphiste.jpg" alt="Design Web" class="card-icon" />
+        <h3>Design Web</h3>
+        <p>Design créatif et ergonomique pour une expérience utilisateur optimale.</p>
+      </div>
+      <div class="card">
+        <img src="dev sur mesure.jpg" alt="Développement sur mesure" class="card-icon" />
+        <h3>Développement sur mesure</h3>
+        <p>Applications personnalisées pour répondre à vos besoins spécifiques.</p>
+      </div>
+      <div class="card">
+        <img src="creation de contenu.jpg" alt="Systèmes de gestion de contenu (CMS)" class="card-icon" />
+        <h3>Systèmes de gestion de contenu (CMS)</h3>
+        <p>Gestion facile et efficace de votre contenu web.</p>
+      </div>
+      <div class="card">
+        <img src="seo.jpg" alt="Optimisation SEO" class="card-icon" />
+        <h3>Optimisation SEO</h3>
+        <p>Améliorez votre visibilité sur les moteurs de recherche.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="stats container">
+  </section>
+
+  <section id="projects" class="projects container">
+    <h2>Projets</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="Boudou-100.jpg" alt="Projet Buudu" />
+        <h3>Buudu</h3>
+        <p>Agence de communication 360 pour le développement durable et l’innovation digitale.</p>
+      </div>
+      <div class="project-card">
+        <img src="Fabrice 2.png" alt="Projet Authentiq" />
+        <h3>Fabrice</h3>
+        <p>Média YouTube sur le numérique au Burkina Faso. Podcasts, décryptages, interviews inspirantes.</p>
+      </div>
+      <div class="project-card">
+        <img src="SkillUp.png" alt="Projet SkillUp" />
+        <h3>SkillUp</h3>
+        <p>Plateforme de freelance adaptée au contexte local. En développement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot container -->
+  <div id="chatbot" class="chatbot-closed">
+    <div class="chatbot-header" id="chatbotToggle">Chatbot</div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <form id="chatbotForm" class="chatbot-form">
+      <input type="text" id="chatbotInput" placeholder="Écrivez un message..." autocomplete="off" />
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <section id="contact" class="contact container">
+    <h2>Contact</h2>
+    <div class="contact-icons">
+      <a href="mailto:kfabrice292@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
+        <img src="mail.jpg" alt="Email" width="32" height="32" />
+      </a>
+      <a href="tel:+22654358747" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <img src="whatsapp.jpg" alt="WhatsApp" width="32" height="32" />
+      </a>
+      <a href="https://web.facebook.com/ajas.ouedraogo" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <img src="facebook.jpg" alt="Facebook" width="32" height="32" />
+      </a>
+      <a href="https://www.linkedin.com/in/fabrice-kabore-5b899423a" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <img src="in.jpg" alt="LinkedIn" width="32" height="32" />
+      </a>
+      <a href="Mon cv.pdf" aria-label="Télécharger CV" download>
+        <img src="cv.jpg" alt="Télécharger CV" width="32" height="32" />
+      </a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
