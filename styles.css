@@ -524,6 +524,41 @@ body.dark .project-card p {
     width: 100%;
     margin-bottom: 1rem;
   }
+
+  .home-card {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .home-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-image {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #chatbot {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
 .contact-icons a img {
