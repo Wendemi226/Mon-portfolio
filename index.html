@@ -10,8 +10,9 @@
 </head>
 <body>
   <header class="header">
-    <nav class="nav container">
+  <nav class="nav container">
       <div class="logo">Fabrice</div>
+      <div id="hamburger" class="hamburger">&#9776;</div>
       <ul class="nav-links">
         <li><a href="#home" class="active">Accueil</a></li>
         <li><a href="#services">Services</a></li>
@@ -143,6 +144,13 @@
       } else {
         chatbot.style.display = 'none';
       }
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
     });
 
     // Animation keyframes for bounce

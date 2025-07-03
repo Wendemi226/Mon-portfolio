@@ -508,9 +508,25 @@ body.dark .project-card p {
 
 @media (max-width: 600px) {
   .nav-links {
+    display: none;
     flex-direction: column;
     gap: 1rem;
   }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+}
+@media (min-width: 601px) {
+  .hamburger {
+    display: none;
 
   .hero-text h1 {
     font-size: 2rem;
