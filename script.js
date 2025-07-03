@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const appointmentMessage = document.getElementById('appointment-message');
 
   if (appointmentForm) {
-    appointmentForm.addEventListener('submit', (e) => {
+    appointmentForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Simple validation (already required in HTML)
@@ -89,18 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('email').value.trim();
       const date = document.getElementById('date').value;
       const time = document.getElementById('time').value;
+      const subject = document.getElementById('subject').value.trim();
 
-      if (!name || !email || !date || !time) {
+      if (!name || !email || !date || !time || !subject) {
         alert('Veuillez remplir tous les champs du formulaire.');
         return;
       }
 
-      // Here you could add code to send the data to a server or email service
-      // For now, just show a thank you message
-      appointmentMessage.style.display = 'block';
+      try {
+        const response = await fetch('http://localhost:3000/send-appointment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, date, time, subject }),
+        });
 
-      // Optionally reset the form
-      appointmentForm.reset();
+        if (response.ok) {
+          appointmentMessage.style.display = 'block';
+          appointmentForm.reset();
+        } else {
+          alert('Erreur lors de l\'envoi de la demande. Veuillez réessayer plus tard.');
+        }
+      } catch (error) {
+        alert('Erreur réseau. Veuillez vérifier votre connexion et réessayer.');
+      }
     });
   }
 });
