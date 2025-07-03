@@ -81,39 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const appointmentMessage = document.getElementById('appointment-message');
 
   if (appointmentForm) {
-    appointmentForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Simple validation (already required in HTML)
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const date = document.getElementById('date').value;
-      const time = document.getElementById('time').value;
-      const subject = document.getElementById('subject').value.trim();
-
-      if (!name || !email || !date || !time || !subject) {
-        alert('Veuillez remplir tous les champs du formulaire.');
-        return;
-      }
-
-      try {
-        const response = await fetch('http://localhost:3000/send-appointment', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, date, time, subject }),
-        });
-
-        if (response.ok) {
-          appointmentMessage.style.display = 'block';
-          appointmentForm.reset();
-        } else {
-          alert('Erreur lors de l\'envoi de la demande. Veuillez réessayer plus tard.');
-        }
-      } catch (error) {
-        alert('Erreur réseau. Veuillez vérifier votre connexion et réessayer.');
-      }
-    });
+    // Remove JavaScript form submission handler to allow Formspree to handle submission
   }
 });
