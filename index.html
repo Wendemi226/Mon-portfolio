@@ -128,6 +128,36 @@
     </div>
   </section>
 
+  <!-- Chatbot icon -->
+  <div id="chatbotIcon" title="Ouvrir le chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; cursor: pointer; z-index: 1000; animation: bounce 2s infinite; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3); background-color: #a10000; display: flex; align-items: center; justify-content: center;">
+    <img src="Chat bot.png" alt="Chatbot Icon" style="width: 40px; height: 40px;" />
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    // Toggle chatbot on icon click
+    document.getElementById('chatbotIcon').addEventListener('click', () => {
+      const chatbot = document.getElementById('chatbot');
+      if (chatbot.style.display === 'none' || chatbot.style.display === '') {
+        chatbot.style.display = 'block';
+      } else {
+        chatbot.style.display = 'none';
+      }
+    });
+
+    // Animation keyframes for bounce
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
