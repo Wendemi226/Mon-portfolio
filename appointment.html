@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prendre un rendez-vous - Wendémi Fabrice KABORE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles_override.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .appointment-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(255, 0, 0, 0.15);
+      background: #fff;
+      color: #000;
+      font-family: 'Poppins', sans-serif;
+    }
+    .appointment-form h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #a10000;
+    }
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+    .form-group label {
+      flex: 1 0 150px;
+      font-weight: 600;
+      align-self: center;
+    }
+    .form-group input, .form-group select {
+      flex: 2 0 300px;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .form-actions {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .form-actions button {
+      background-color: #a10000;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-actions button:hover {
+      background-color: #ff0000;
+    }
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+      .form-group label, .form-group input, .form-group select {
+        flex: 1 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">Fabrice</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Accueil</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="index.html#projects">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="appointment-form" class="appointment-form" action="javascript:void(0);">
+      <h1>Prendre un rendez-vous</h1>
+      <div class="form-group">
+        <label for="name">Votre nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom complet" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Votre email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required />
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+      <div class="form-group">
+        <label for="time">Heure</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Objet du rendez-vous</label>
+        <textarea id="subject" name="subject" rows="4" placeholder="Décrivez l'objet de votre rendez-vous" required style="padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; width: 100%;"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Envoyer la demande</button>
+      </div>
+      <p id="appointment-message" style="color: green; margin-top: 0.5rem; display: none;">Merci, votre demande de rendez-vous a été envoyée.</p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

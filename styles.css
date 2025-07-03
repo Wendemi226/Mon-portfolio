@@ -526,7 +526,7 @@ body.dark .project-card p {
   }
 
   .home-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 2rem;
   }
 
@@ -537,7 +537,22 @@ body.dark .project-card p {
 
   .home-image {
     max-width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .email-form {
+    flex-wrap: wrap;
+  }
+
+  .email-form input[type="email"] {
+    flex: 1 1 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .email-form button {
+    flex: 1 1 100%;
+    margin: 0;
   }
 
   .cards-grid {
@@ -604,4 +619,22 @@ body.dark .project-card p {
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
   margin-top: 12px;
+}
+
+.btn-appointment {
+  display: inline-block;
+  background-color: #a10000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-appointment:hover {
+  background-color: #ff0000;
 }

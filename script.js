@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return response;
   }
 
-  // Handle form submit
+  // Handle form submit for chatbot
   chatbotForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const userMessage = chatbotInput.value.trim();
@@ -75,4 +75,32 @@ document.addEventListener('DOMContentLoaded', () => {
       addMessage(response, 'bot');
     }, 500);
   });
+
+  // Handle appointment form submission if on appointment.html
+  const appointmentForm = document.getElementById('appointment-form');
+  const appointmentMessage = document.getElementById('appointment-message');
+
+  if (appointmentForm) {
+    appointmentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Simple validation (already required in HTML)
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+
+      if (!name || !email || !date || !time) {
+        alert('Veuillez remplir tous les champs du formulaire.');
+        return;
+      }
+
+      // Here you could add code to send the data to a server or email service
+      // For now, just show a thank you message
+      appointmentMessage.style.display = 'block';
+
+      // Optionally reset the form
+      appointmentForm.reset();
+    });
+  }
 });
